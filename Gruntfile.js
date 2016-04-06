@@ -1,26 +1,10 @@
-module.exports = function(grunt) {
+ module.exports = function(grunt) {
 
     grunt.registerTask( 'default', [ 'clean', 'copy', 'hapi', 'watch'] );
-    
-    grunt.registerTask('fun', 'This task is for fun only', function() {
-        grunt.log.writeln('This the *fun* Grunt task');
-    });
- 
-    grunt.registerTask('serious', 'This task is for serious stuff only', function() {
-        grunt.log.writeln('Wipe that smirk off your face; this is serious.');
-    });
 
     grunt.registerTask( 'build', [ 'clean', 'copy' ] );
 
-    grunt.registerTask('default', 'Testing out Grunt logging and task callbacks', ['watch']);
-    
     grunt.registerTask( 'run', [ 'hapi', 'watch' ]);
-    
-    grunt.initConfig({
-        watch: {
-            files: ['Gruntfile.js']
-        }
-    })
 
     grunt.initConfig({
 
@@ -85,7 +69,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-        
 
         clean: ['./dist']
     });
